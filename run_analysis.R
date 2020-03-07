@@ -1,0 +1,1 @@
+## R Script for the Getting and Cleaning Data Course Project
