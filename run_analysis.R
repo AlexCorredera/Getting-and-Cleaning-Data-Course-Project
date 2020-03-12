@@ -1,8 +1,15 @@
-# This is code to replicate the analyses and figures for the Gettting and
+# ==================================================================
+# Coursera Getting and Cleaning Data Course Project - R Script
+# March 2020
+# Alex Corredera
+
+# ================================================================== 
+# This is code to replicate the analyses and tidy data sets for the Getting and
 # Cleaning Data Course Project. Data from the UCI HAR Dataset zip file provided
 # by the course is used. The Explanations are included to resume all of the various 
 # steps taken to complete the analyses.
 
+# ================================================================== 
 # In summary, the following code (1) merges the training and test sets to create 
 # one data set, steps 1-7, (2) extracts only measurements on the mean and standard
 # deviation for each measurement, step 7, (3) uses descriptive activity labels to       
@@ -10,6 +17,7 @@
 # variable names, steps 1-2, (5) creates a second tidy data set with the average 
 # of each variable for each activity and each subject, step 8.
 
+# ================================================================== 
 # 1. First, read the features dataset into R and store this as an object ("features")
 # This will be used as the column names when reading the test and train  
 # sets (X_test, X_train) into R. Furthermore, only read the second column of the 
@@ -23,7 +31,7 @@ features <- read.table("./UCI HAR Dataset/features.txt")[, 2]
 # 2. Read the test and train data sets and labels into separate data frames in R.
 # Store the four data frames into separate objects (X_test, y_test, X_train, 
 # y_train). Use the features list as column names for the sets and "activity" 
-# for the lable column name.
+# for the label column name.
 X_test <- read.table("./UCI HAR Dataset/test/X_test.txt", col.names = features)
 y_test <- read.table("./UCI HAR Dataset/test/y_test.txt", col.names = "activity")
 X_train <- read.table("./UCI HAR Dataset/train/X_train.txt", col.names = features)
