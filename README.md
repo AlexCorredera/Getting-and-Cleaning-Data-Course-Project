@@ -1,4 +1,3 @@
-==================================================================
 Coursera Getting and Cleaning Data Course Project - README file
 March 2020
 Alex Corredera
