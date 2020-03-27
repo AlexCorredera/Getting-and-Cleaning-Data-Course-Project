@@ -1,4 +1,3 @@
-# ==================================================================
 # Coursera Getting and Cleaning Data Course Project - R Script
 # March 2020
 # Alex Corredera
@@ -97,4 +96,5 @@ df <- df[, c(1, 2, means, stds)]
 # tidy data set to a new object 'df2'.
 library (dplyr) #<make sure the dplyr package is loaded>
 df2 <- df %>% group_by(subject, activity) %>% summarise_all(mean)
+write.table(df2, "df2.txt", row.names = FALSE)
 
